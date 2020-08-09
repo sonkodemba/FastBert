@@ -54,12 +54,6 @@ else:
     multi_gpu = False
 
 # BertDataBunch
-
-# This is an excellent idea borrowed from fast.ai library. The databunch object takes training,
-# validation and test csv files and converts the data into internal representation for BERT.
-# The object also instantiates the correct data-loaders based on device profile and batchsize and maxsequence_length.
-
-
 bertdatabunch = BertDataBunch(DATA_PATH, LABEL_PATH, tokenizer,
                           train_file='train.csv', val_file='val.csv', label_file='labels.csv',
                           bs=BERT_PARAMETERS['train_batch_size'], maxlen=BERT_PARAMETERS['max_seq_length'],
