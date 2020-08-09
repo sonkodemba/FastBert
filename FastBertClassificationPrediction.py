@@ -64,7 +64,7 @@ metrics = []
 metrics.append({'name': 'accuracy', 'function': accuracy})
 
 # BertLearner
-learner = BertLearner.from_pretrained_model(bertdatabunch, BERT_PRETRAINED_PATH, metrics, device, logger,                                             finetuned_wgts_path=None,
+learner = BertLearner.from_pretrained_model(bertdatabunch, BERT_PRETRAINED_PATH, metrics, device, logger, finetuned_wgts_path=None,
                                             is_fp16=BERT_PARAMETERS['fp16'], loss_scale=BERT_PARAMETERS['loss_scale'],
                                             multi_gpu=multi_gpu,  multi_label=False)
 
