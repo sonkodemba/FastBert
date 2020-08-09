@@ -71,6 +71,7 @@ learner = BertLearner.from_pretrained_model(bertdatabunch, BERT_PRETRAINED_PATH,
 # Train Model
 learner.fit(6, lr=BERT_PARAMETERS['learning_rate'],schedule_type="warmup_cosine_hard_restarts")
 
+#Notice that the data URL is for StandFord  Question and Answer dataset, that i sue to fed into the Model.
 data = "https://rajpurkar.github.io/SQuAD-explorer/dataset/train-v1.1.json"
 learner.predict_batch(data)
 
